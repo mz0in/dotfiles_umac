@@ -48,10 +48,14 @@ apt_packages+=(
   telnet
   thefuck
   tree
+  zsh
 )
 
 apt_packages+=(vim)
 is_ubuntu_desktop && apt_packages+=(vim-gnome)
+
+add_ppa ppa:kelleyk/emacs
+apt_packages+=(emacs26)
 
 # https://github.com/neovim/neovim/wiki/Installing-Neovim
 add_ppa ppa:neovim-ppa/stable

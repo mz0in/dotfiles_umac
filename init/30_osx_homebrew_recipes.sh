@@ -6,33 +6,27 @@ is_osx || return 1
 
 # Homebrew recipes
 recipes=(
-  ansible
-  awscli
-  bash
-  cmatrix
+  zsh
+  zsh-syntax-highlighting
   coreutils
-  cowsay
   git
   git-extras
-  htop-osx
   hub
-  id3tool
+  z
   jq
-  lesspipe
-  man2html
-  mercurial
-  nmap
-  postgresql
-  reattach-to-user-namespace
-  sl
-  ssh-copy-id
-  terminal-notifier
   the_silver_searcher
-  thefuck
-  tmux
-  tmux-xpanes
-  tree
-  wget
+  ccat
+  emacs-plus
+
+  # language
+  go
+  ruby
+  python
+  node
+  nvm
+  yarn
+  elixir
+  rust
 )
 
 brew_install_recipes
@@ -49,13 +43,24 @@ if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop
   sudo chmod u+s "$binroot/htop"
 fi
 
-# bash
-if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then
-  e_header "Adding $binroot/bash to the list of acceptable shells"
-  echo "$binroot/bash" | sudo tee -a /etc/shells >/dev/null
+# # bash
+# if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then
+#   e_header "Adding $binroot/bash to the list of acceptable shells"
+#   echo "$binroot/bash" | sudo tee -a /etc/shells >/dev/null
+# fi
+# if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/bash" ]]; then
+#   e_header "Making $binroot/bash your default shell"
+#   sudo chsh -s "$binroot/bash" "$USER" >/dev/null 2>&1
+#   e_arrow "Please exit and restart all your shells."
+# fi
+
+# zsh
+if [[ "$(type -p $binroot/zsh)" && "$(cat /etc/shells | grep -q "$binroot/zsh")" ]]; then
+  e_header "Adding $binroot/zsh to the list of acceptable shells"
+  echo "$binroot/zsh" | sudo tee -a /etc/shells >/dev/null
 fi
-if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/bash" ]]; then
-  e_header "Making $binroot/bash your default shell"
-  sudo chsh -s "$binroot/bash" "$USER" >/dev/null 2>&1
+if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/zsh" ]]; then
+  e_header "Making $binroot/zsh your default shell"
+  sudo chsh -s "$binroot/zsh" "$USER" >/dev/null 2>&1
   e_arrow "Please exit and restart all your shells."
 fi

@@ -6,13 +6,31 @@ PATH="/usr/local/bin:$(path_remove /usr/local/bin)"
 export PATH
 
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+alias trimcopy="tr -d '\n' | pbcopy"
+
+# `cat` with beautiful colors. requires Pygments installed.
+# 							   sudo easy_install -U Pygments
+alias c='pygmentize -O style=monokai -f console256 -g'
+
 
 # Make 'less' more.
 [[ "$(type -P lesspipe.sh)" ]] && eval "$(lesspipe.sh)"
 
 # Start ScreenSaver. This will lock the screen if locking is enabled.
 alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
+
+# Empty the Trash on all mounted volumes and the main HDD
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
+
+# Merge PDF files
+# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
+alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup'
 
 # Create a new Parallels VM from template, replacing the existing one.
 function vm_template() {

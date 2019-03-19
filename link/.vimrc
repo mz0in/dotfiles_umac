@@ -381,6 +381,8 @@ if v:version >= 800
 else
   Plug 'vim-syntastic/syntastic'
 endif
+Plug 'fatih/vim-go'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 let g:gruvbox_bold = 1
@@ -389,3 +391,4 @@ let g:gruvbox_italicize_comments = 1
 let g:gruvbox_contrast_dark = 'medium'
 set background=dark
 colorscheme gruvbox
+" colorscheme base16-eighties

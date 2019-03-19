@@ -37,3 +37,7 @@ function brew_install_recipes() {
     done
   fi
 }
+
+# Ensure the cask kegs are installed.
+kegs=(caskroom/fonts homebrew/cask-versions d12frosted/emacs-plus netlify/netlifyctl)
+brew_tap_kegs

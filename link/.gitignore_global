@@ -58,3 +58,13 @@ Desktop.ini
 .swo
 .*.swp
 .*.swo
+
+.bundle
+.env
+db/*.sqlite3
+log/*.log
+rerun.txt
+tags
+!tags/
+tmp/**/*
+!tmp/cache/.keep

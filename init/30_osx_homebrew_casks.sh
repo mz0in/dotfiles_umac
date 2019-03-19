@@ -18,67 +18,53 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 # Homebrew casks
 casks=(
   # Applications
-  a-better-finder-rename
-  alfred
-  android-platform-tools
-  bartender
-  battle-net
-  bettertouchtool
-  charles
-  chromium
-  chronosync
-  controllermate
-  docker
-  dropbox
-  fastscripts
-  firefox
-  gyazo
-  hex-fiend
   iterm2
-  karabiner-elements
-  macvim
-  messenger-for-desktop
-  midi-monitor
-  moom
-  omnidisksweeper
-  race-for-the-galaxy
-  reaper
-  robo-3t
-  screenhero
-  scroll-reverser
-  skype
+  1password
+  visual-studio-code
   slack
-  sourcetree
-  spotify
-  steam
+  licecap
+  docker
+  hex-fiend
+  omnidisksweeper
   the-unarchiver
-  totalfinder
-  tower
-  vagrant
-  virtualbox
-  vlc
-  ynab
+  android-platform-tools
+  gotiengviet
+  google-chrome
+  imageoptim
+  ngrok
+  tableplus
+  insomnia-x
+  insomnia
+  java8
+  gpg-suite
+  
+
   # Quick Look plugins
-  betterzipql
+  betterzip
   qlcolorcode
   qlmarkdown
   qlprettypatch
   qlstephen
+  qlimagesize
   quicklook-csv
   quicklook-json
   quicknfo
   suspicious-package
   webpquicklook
+  provisionql
+
   # Color pickers
   colorpicker-developer
   colorpicker-skalacolor
-  # Drivers
-  sonos
-  xbox360-controller-driver
+
   # Fonts
   font-m-plus
   font-mplus-nerd-font
   font-mplus-nerd-font-mono
+  font-source-code-pro
+  font-source-sans-pro
+  font-fira-code
+  font-firacode-nerd-font
 )
 
 # Install Homebrew casks.
