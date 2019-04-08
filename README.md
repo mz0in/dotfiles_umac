@@ -110,6 +110,7 @@ Scripts in the `/init` subdirectory will be executed. A whole bunch of things wi
 * Homebrew recipes via the [init/30_osx_homebrew_recipes.sh](init/30_osx_homebrew_recipes.sh) script
 * Homebrew casks via the [init/30_osx_homebrew_casks.sh](init/30_osx_homebrew_casks.sh) script
 * [Fonts](/dwarvesf/dotfiles/tree/master/conf/osx/fonts) via the [init/50_osx_fonts.sh](init/50_osx_fonts.sh) script
+* iTerm2 config can be configured at `Preferences > General > Preferences > Load Preferences from a custom folder or URL`
 
 #### Ubuntu
 * APT packages and git-extras via the [init/20_ubuntu_apt.sh](init/20_ubuntu_apt.sh) script
