@@ -20,13 +20,11 @@ recipes=(
 
   # language
   go
-  ruby
   python
   node
   nvm
   yarn
   elixir
-  rust
 )
 
 brew_install_recipes

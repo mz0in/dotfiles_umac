@@ -1,6 +1,6 @@
 is_ubuntu && {
   # Define Golang version
-  GO_VERSION="1.7"
+  GO_VERSION="1.14"
   ARCH="amd64"
   OS="linux"
 
