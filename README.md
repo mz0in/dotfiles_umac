@@ -67,17 +67,6 @@ Either way, you should at least update/upgrade APT with `sudo apt-get -qq update
 
 _Tested in Ubuntu 14.04 LTS_
 
-### Actual installation
-
-Since you'll be using the [dotfiles][dotfiles] command on subsequent runs, you'll only have to set the `DOTFILES_GH_USER` variable for the initial install, but if you have a custom branch, you _will_ need to export `DOTFILES_GH_BRANCH` for subsequent runs.
-
-There's a lot of stuff that requires admin access via `sudo`, so be warned that you might need to enter your password here or there.
-
-```sh
-export DOTFILES_GH_USER=dwarvesf
-export DOTFILES_GH_BRANCH=master
-```
-
 #### Ubuntu
 
 ```sh
@@ -154,7 +143,6 @@ Scripts in the `/init` subdirectory will be executed. A whole bunch of things wi
 
 - Node.js, npm and nvm via the [init/50_node.sh](init/50_node.sh) script
 - Golang and plugins via the [init/50_golang.sh](init/50_golang.sh)
-- Ruby, gems and rbenv via the [init/50_ruby.sh](init/50_ruby.sh) script
 - Vim plugins via the [init/50_vim.sh](init/50_vim.sh) script
 - VSCode via the [init/60_vscode.sh](init/60_vscode.sh) script
 
